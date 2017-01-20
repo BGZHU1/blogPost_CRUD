@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Blog Title</h1>
+
+  <form action='/board' method="post">
+      <span> <h4>post title</h4> </span>
+    <input type="text" name="title" placeholder="title">
+
+    <div>
+      <h4>your story</h4>
+    <input type="text" name="body" placeholder="body" style=" height:300px; width:300px; margin-top:30px">
+  </div>
+  <div>
+    <input type="submit" value="Add" style=" margin-top:30px">
+  </div>
+
+  </form>
+
+  <% for (var i =0; i<data.length; i++) {%>
+    <li><%= data[i].title %></li>
+    <li><%= data[i].body %></li>
+  <% } %>
+
+</body>
+</html>
